@@ -1,0 +1,12 @@
+{
+  "hash": "ada5041343237843506345e425a9c374",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Home\"\njupyter: python3\n---\n\n## Box Office Numbers\n\nThis website explores a dataset of 104 films released between 1980 and 2025. The dataset includes production budgets, worldwide box-office revenues, runtimes, and IMDb ratings. We use these variables to explore relationships between film characteristics and financial performance.\n\n## Analysis Pages\n\n- [Budget and Revenue](budget-revenue.qmd)\n- [Runtime and Ratings](runtime-rating.qmd)\n- [The Bond Films](bond.qmd)\n\n## AI Usage\n\nI used ChatGPT to check Quarto code, and troubleshoot technical issues.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

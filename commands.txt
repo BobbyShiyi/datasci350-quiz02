@@ -64,4 +64,55 @@ open -a "Visual Studio Code" bond.qmd
 quarto render bond.qmd
 open _site/bond.html
 
+# Task 10: Render website and commit files
 
+pwd
+cd /Users/jayhu/DS350_Quiz/datasci350-quiz02
+
+# Render the complete four-page website
+quarto render
+
+# Verify generated files and freeze directory
+ls _site
+ls -a _freeze
+
+# Open the homepage to check navigation and plots
+open _site/index.html
+
+# Stage all project files, including _freeze
+git add .
+git status
+git commit -m "Add site pages and freeze"
+
+# Verify commit history and repository status
+git log -2 --oneline
+git status
+
+
+# Task 11: Publish the Quarto website to GitHub Pages
+
+git status
+quarto publish gh-pages
+open https://bobbyshiyi.github.io/datasci350-quiz02/
+
+
+# Task 12: Fix website navigation
+
+# Checked _quarto.yml and corrected website title
+open -a "Visual Studio Code" _quarto.yml
+quarto render
+quarto publish gh-pages
+git status
+
+# Task 13: Finalize command log
+open -a "Visual Studio Code" commands.txt
+
+# Stage and commit final changes
+git add .
+git commit -m "Add command log"
+
+# Task 14: Push changes to main
+git push
+
+# Verify final Git status
+git status
