@@ -1,0 +1,25 @@
+---
+title: "Budget and Revenue"
+jupyter: python3
+---
+
+## Budget vs. Revenue
+
+This page examines the relationship between film production budgets and worldwide box office revenue. Figure @fig-budget-revenue shows how the two variables are related.
+
+```{python}
+#| echo: true
+#| label: fig-budget-revenue
+#| fig-cap: "Film Production Budget vs. Worldwide Revenue"
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+films = pd.read_csv("films.csv")
+
+plt.scatter(films["budget_musd"], films["revenue_musd"])
+plt.xlabel("Production Budget (Million USD)")
+plt.ylabel("Worldwide Revenue (Million USD)")
+plt.title("Budget vs. Revenue")
+plt.show()
+```

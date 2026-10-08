@@ -1,0 +1,67 @@
+# Setup
+mkdir -p /Users/jayhu/DS350_Quiz
+cd /Users/jayhu/DS350_Quiz
+git clone https://github.com/BobbyShiyi/datasci350-quiz02.git 
+
+# Task 1: Create Quarto website
+cd DS350_Quiz/datasci350-quiz02
+quarto create project website .
+ls -a
+touch commands.txt
+
+# Task 2
+open -a "Visual Studio Code" .gitignore
+git add .gitignore
+git commit -m "Add gitignore"  
+
+# Task 3: Change website title
+open -a "Visual Studio Code" _quarto.yml
+# Edited _quarto.yml in VS Code.
+# Changed website title to "Box Office Numbers".
+
+# Task 4: Update navigation
+# Edited _quarto.yml to remove About and add:
+# Budget and Revenue, Runtime and Ratings, The Bond Films.
+rm about.qmd
+
+# Task 5: Set theme and freeze
+# Changed HTML theme to cosmo in _quarto.yml.
+# Added execute: freeze: auto.
+
+# Task 6: Create homepage
+open -a "Visual Studio Code" index.qmd
+
+# Edited index.qmd to include:
+# - A homepage title
+# - A description of the films dataset
+# - Links to the three analysis pages
+# - An AI usage disclosure
+
+# Task 7: Budget and Revenue page
+touch budget-revenue.qmd
+open -a "Visual Studio Code" budget-revenue.qmd
+
+# Created a Quarto page with a scatter plot of
+# production budget against worldwide revenue.
+# Added echo: true, fig-cap, label: fig-budget-revenue,
+# and a cross-reference using @fig-budget-revenue.
+
+# Task 8: Correct Runtime and Ratings page
+open -a "Visual Studio Code" runtime-rating.qmd
+# Created scatter plot with figure caption and cross-reference.
+quarto render runtime-rating.qmd
+
+# Task 9: Create the Bond Films page
+touch bond.qmd
+open -a "Visual Studio Code" bond.qmd
+
+# Created bond.qmd using the provided films.csv.
+# Filtered films where franchise == "James Bond".
+# Sorted Bond films by release year.
+# Created a line plot of worldwide revenue over time.
+# Used inline Python with int() to display the first
+# and last Bond film release years dynamically.
+quarto render bond.qmd
+open _site/bond.html
+
+
