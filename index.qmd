@@ -15,4 +15,4 @@ This website explores a dataset of 104 films released between 1980 and 2025. The
 
 ## AI Usage
 
-I used ChatGPT to check Quarto code, and troubleshoot technical issues.
+I used ChatGPT to write and review parts of the code and troubleshoot technical issues.
